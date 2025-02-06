@@ -18,11 +18,11 @@ It simplifies and streamlines the process of service registration, reducing manu
 ## Installation
 Install via NuGet Package Manager:
 ```bash
-Install-Package DIalect
+Install-Package DynamicDI
 ```
 Or using .NET CLI:
 ```bash
-dotnet add package DIalect
+dotnet add package DynamicDI
 ```
 
 ## Usage
