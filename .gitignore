@@ -1,5 +1,5 @@
 .vs/
-DIalect/bin/
-DIalect/obj/
-DIalect.Test.WebApi/bin/
-DIalect.Test.WebApi/obj/
+DynamicDI/bin/
+DynamicDI/obj/
+DynamicDI.Test.WebApi/bin/
+DynamicDI.Test.WebApi/obj/

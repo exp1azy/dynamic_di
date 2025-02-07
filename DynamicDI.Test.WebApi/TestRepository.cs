@@ -1,4 +1,4 @@
-﻿namespace DIalect.Test.WebApi
+﻿namespace DynamicDI.Test.WebApi
 {
     [RegisterService(ServiceLifeCycle.Singleton)]
     public class TestRepository : ITestRepository

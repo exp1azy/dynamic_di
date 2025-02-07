@@ -1,28 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+	<TargetFrameworks>net7.0;net8.0;net9.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>DIalect</Title>
+    <Title>DynamicDI</Title>
     <Authors>explazy</Authors>
     <Description>This library provides automatic service registration in the ASP.NET Core Dependency Injection container by scanning assemblies and detecting classes marked with a RegisterService attribute. It simplifies and streamlines the process of service registration, reducing manual configurations and improving maintainability.</Description>
     <PackageProjectUrl>https://github.com/exp1azy/dialect</PackageProjectUrl>
     <RepositoryUrl>https://github.com/exp1azy/dialect</RepositoryUrl>
     <PackageTags>dependencyinjection;di;automaticregistration;asp.netcore;servicecollection;ioccontainer;serviceprovider;dotnetcore;dynamicdi;c#di;asp.netdi;dependencyinjectionlibrary;iocframework;autoregistration;servicediscovery</PackageTags>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>DynamicDI</PackageId>
+    <Version>1.0.1</Version>
+    <Product>DynamicDI</Product>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Added support for .NET 7.0 and .NET 8.0</PackageReleaseNotes>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.1" />
@@ -30,7 +26,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="LICENSE.txt">
+    <None Include="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyModel;
 using System.Reflection;
 
-namespace DIalect
+namespace DynamicDI
 {
     public static class ServiceCollectionExtensions
     {
@@ -29,7 +29,7 @@ namespace DIalect
                     else
                     {
                         var interfacesToRegister = attribute!.InterfaceRegistrationStrategy == InterfaceRegistrationStrategy.FirstOnly ?
-                            [interfaces.First()] : interfaces;
+                            new List<Type> { interfaces.First() } : interfaces;
 
                         foreach (var iface in interfacesToRegister)
                             Register(services, iface, service, attribute!.LifeCycle);

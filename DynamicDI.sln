@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIalect", "DIalect\DIalect.csproj", "{CCBCF741-0A25-41BD-9DE7-95FC723C2E17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDI", "DynamicDI\DynamicDI.csproj", "{CCBCF741-0A25-41BD-9DE7-95FC723C2E17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIalect.Test.WebApi", "DIalect.Test.WebApi\DIalect.Test.WebApi.csproj", "{60FFB361-AC92-4C4B-A70E-B783BA18136B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDI.Test.WebApi", "DynamicDI.Test.WebApi\DynamicDI.Test.WebApi.csproj", "{60FFB361-AC92-4C4B-A70E-B783BA18136B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

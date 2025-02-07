@@ -1,4 +1,4 @@
-﻿namespace DIalect
+﻿namespace DynamicDI
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
     public class RegisterServiceAttribute : Attribute

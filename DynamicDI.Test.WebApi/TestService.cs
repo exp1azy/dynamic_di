@@ -1,5 +1,4 @@
-﻿
-namespace DIalect.Test.WebApi
+﻿namespace DynamicDI.Test.WebApi
 {
     [RegisterService(ServiceLifeCycle.Transient, InterfaceRegistrationStrategy.AllInterfaces)]
     public class TestService(ITestRepository repository) : ITestService, ITestable

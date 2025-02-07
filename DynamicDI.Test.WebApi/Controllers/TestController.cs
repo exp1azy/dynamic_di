@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace DIalect.Test.WebApi.Controllers
+namespace DynamicDI.Test.WebApi.Controllers
 {
     [Route("api/test")]
     [ApiController]
