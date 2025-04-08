@@ -8,14 +8,11 @@ namespace DynamicDI
     {
         public static void RegisterServices(this IServiceCollection services)
         {
-            var assemblies = DependencyContext.Default!.RuntimeLibraries
-                .Where(lib => lib.Type == "project") 
-                .Select(lib => Assembly.Load(new AssemblyName(lib.Name)))
-                .ToList();
-
+            var assemblies = GetAssemblies();
             foreach (var assembly in assemblies)
             {
                 var servicesToRegister = assembly.DefinedTypes.Where(t => t.IsDefined(typeof(RegisterServiceAttribute))).ToList();
+                if (servicesToRegister.Count == 0) return;
 
                 foreach (var service in servicesToRegister)
                 {
@@ -36,6 +33,39 @@ namespace DynamicDI
                     }
                 }
             }
+        }
+
+        public static void RegisterDbContexts(this IServiceCollection services)
+        {
+            var assemblies = GetAssemblies();
+
+            var method = typeof(EntityFrameworkServiceCollectionExtensions)
+                .GetMethods(BindingFlags.Public | BindingFlags.Static)
+                .First(m =>
+                    m.Name == "AddDbContext" &&
+                    m.IsGenericMethodDefinition &&
+                    m.GetGenericArguments().Length == 1 &&
+                    m.GetParameters().Any(p => p.ParameterType == typeof(IServiceCollection))
+                );
+
+            foreach (var assembly in assemblies)
+            {
+                var dbContexts = assembly.DefinedTypes.Where(t => t.IsDefined(typeof(RegisterDbContextAttribute))).ToList();
+                if (dbContexts.Count == 0) return;
+
+                foreach (var contextType in dbContexts)
+                {
+                    var genericMethod = method!.MakeGenericMethod(contextType);
+                    genericMethod.Invoke(null, new object[] { services, null!, ServiceLifetime.Scoped, ServiceLifetime.Scoped });
+                }
+            }
+        }
+
+        private static IEnumerable<Assembly> GetAssemblies()
+        {
+            return DependencyContext.Default!.RuntimeLibraries
+                .Where(lib => lib.Type == "project")
+                .Select(lib => Assembly.Load(new AssemblyName(lib.Name)));
         }
 
         private static void Register(IServiceCollection services, Type serviceType, Type implementationType, ServiceLifeCycle lifetime)

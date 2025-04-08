@@ -19,5 +19,11 @@ namespace DynamicDI.Test.WebApi.Controllers
         {
             return Ok(_service.GetMessages());
         }
+
+        [HttpGet("csi")]
+        public async Task<IActionResult> GetCsi(CancellationToken cancellationToken)
+        {
+            return Ok(await _service.GetCsiAsync(cancellationToken));
+        }
     }
 }

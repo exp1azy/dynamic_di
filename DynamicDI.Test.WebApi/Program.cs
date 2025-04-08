@@ -9,8 +9,11 @@ namespace DynamicDI.Test.WebApi
             builder.Services.AddControllers();
             builder.Services.AddOpenApi();
             
-            // Register services.
+            // Register services
             builder.Services.RegisterServices();
+
+            // Register db contexts
+            builder.Services.RegisterDbContexts();
 
             var app = builder.Build();
 
