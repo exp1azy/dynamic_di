@@ -11,9 +11,7 @@ namespace DynamicDI
             var assemblies = GetAssemblies();
             foreach (var assembly in assemblies)
             {
-                var servicesToRegister = assembly.DefinedTypes.Where(t => t.IsDefined(typeof(RegisterServiceAttribute))).ToList();
-                if (servicesToRegister.Count == 0) return;
-
+                var servicesToRegister = assembly.DefinedTypes.Where(t => t.IsDefined(typeof(RegisterServiceAttribute)));
                 foreach (var service in servicesToRegister)
                 {
                     var attribute = service.GetCustomAttribute<RegisterServiceAttribute>();
@@ -50,13 +48,11 @@ namespace DynamicDI
 
             foreach (var assembly in assemblies)
             {
-                var dbContexts = assembly.DefinedTypes.Where(t => t.IsDefined(typeof(RegisterDbContextAttribute))).ToList();
-                if (dbContexts.Count == 0) return;
-
+                var dbContexts = assembly.DefinedTypes.Where(t => t.IsDefined(typeof(RegisterDbContextAttribute)));
                 foreach (var contextType in dbContexts)
                 {
                     var genericMethod = method!.MakeGenericMethod(contextType);
-                    genericMethod.Invoke(null, new object[] { services, null!, ServiceLifetime.Scoped, ServiceLifetime.Scoped });
+                    _ = genericMethod.Invoke(null, new object[] { services, null!, ServiceLifetime.Scoped, ServiceLifetime.Scoped });
                 }
             }
         }

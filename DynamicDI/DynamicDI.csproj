@@ -13,11 +13,11 @@
     <PackageTags>dependencyinjection;di;automaticregistration;asp.netcore;servicecollection;ioccontainer;serviceprovider;dotnetcore;dynamicdi;c#di;asp.netdi;dependencyinjectionlibrary;iocframework;autoregistration;servicediscovery</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>DynamicDI</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.2.1</Version>
     <Product>DynamicDI</Product>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Added support for registering database contexts in DI</PackageReleaseNotes>
+    <PackageReleaseNotes>Critical error fixed</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
