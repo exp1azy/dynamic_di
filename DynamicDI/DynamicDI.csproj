@@ -7,17 +7,17 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>DynamicDI</Title>
     <Authors>explazy</Authors>
-    <Description>This library provides automatic service registration in the ASP.NET Core Dependency Injection container by scanning assemblies and detecting classes marked with a RegisterService attribute. It simplifies and streamlines the process of service registration, reducing manual configurations and improving maintainability.</Description>
+    <Description>This library provides automatic service registration in the ASP.NET Core Dependency Injection container. It simplifies and streamlines the process of service registration, reducing manual configurations and improving maintainability.</Description>
     <PackageProjectUrl>https://github.com/exp1azy/dialect</PackageProjectUrl>
     <RepositoryUrl>https://github.com/exp1azy/dialect</RepositoryUrl>
-    <PackageTags>dependencyinjection;di;automaticregistration;asp.netcore;servicecollection;ioccontainer;serviceprovider;dotnetcore;dynamicdi;c#di;asp.netdi;dependencyinjectionlibrary;iocframework;autoregistration;servicediscovery</PackageTags>
+    <PackageTags>dependency;injection;inject;dependency injection;di;asp.net;web;api;web api</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>DynamicDI</PackageId>
-    <Version>1.0.2.1</Version>
+    <Version>1.1.0</Version>
     <Product>DynamicDI</Product>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Critical error fixed</PackageReleaseNotes>
+    <PackageReleaseNotes>Optimizations</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
