@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>DynamicDI</Title>
     <Authors>explazy</Authors>
     <Description>This library provides automatic service registration in the ASP.NET Core Dependency Injection container. It simplifies and streamlines the process of service registration, reducing manual configurations and improving maintainability.</Description>
@@ -13,11 +14,11 @@
     <PackageTags>dependency;injection;inject;dependency injection;di;asp.net;web;api;web api</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>DynamicDI</PackageId>
-    <Version>1.1.0</Version>
+    <Version>2.0.0</Version>
     <Product>DynamicDI</Product>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Optimizations</PackageReleaseNotes>
+    <PackageReleaseNotes>added documentation + added the ability to specify assemblies where to get services from</PackageReleaseNotes>	  
   </PropertyGroup>
 
   <ItemGroup>

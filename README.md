@@ -62,6 +62,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.RegisterServices(); // services registration
 builder.Services.RegisterDbContexts(); // db contexts registration
 ```
+You can also specify the assemblies from where you want to register services:
+```csharp
+using DynamicDI;
+
+Assembly[] assemblies = GetAssemblies(); // your assemblies
+builder.Services.RegisterServices(assemblies);
+```
 ### 3. Inject Services Anywhere
 Once registered, services can be injected as usual:
 ```csharp
