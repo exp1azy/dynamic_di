@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DynamicDI.Test.WebApi
 {
-    [RegisterService]
+    [Service]
     public class TestRepository : ITestRepository
     {
         private readonly DataContext _dbContext;

@@ -7,22 +7,10 @@ namespace DynamicDI.Test.WebApi
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers();
-            builder.Services.AddOpenApi();
-            
-            // Register services
             builder.Services.RegisterServices();
-
-            // Register db contexts
-            builder.Services.RegisterDbContexts();
 
             var app = builder.Build();
 
-            if (app.Environment.IsDevelopment())
-            {
-                app.MapOpenApi();
-            }
-
-            app.UseAuthorization();
             app.MapControllers();
             app.Run();
         }

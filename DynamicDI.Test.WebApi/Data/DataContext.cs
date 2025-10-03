@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DynamicDI.Test.WebApi.Data
 {
-    [RegisterDbContext]
+    [Service([typeof(DataContext)])]
     public class DataContext : DbContext
     {
         private readonly IConfiguration _config;

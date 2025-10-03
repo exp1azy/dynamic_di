@@ -14,11 +14,11 @@
     <PackageTags>dependency;injection;inject;dependency injection;di;asp.net;web;api;web api</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>DynamicDI</PackageId>
-    <Version>2.0.0</Version>
+    <Version>3.0.0</Version>
     <Product>DynamicDI</Product>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>added documentation + added the ability to specify assemblies where to get services from</PackageReleaseNotes>	  
+    <PackageReleaseNotes>one ServiceAttribute attribute for all cases</PackageReleaseNotes>	  
   </PropertyGroup>
 
   <ItemGroup>
