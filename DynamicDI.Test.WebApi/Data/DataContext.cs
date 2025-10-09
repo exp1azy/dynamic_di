@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DynamicDI.Test.WebApi.Data
 {
-    [Service([typeof(DataContext)])]
+    [Service(ServiceLifeCycle.Scoped, [typeof(DataContext)])]
     public class DataContext : DbContext
     {
         private readonly IConfiguration _config;

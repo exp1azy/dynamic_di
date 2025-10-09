@@ -14,11 +14,12 @@
     <PackageTags>dependency;injection;inject;dependency injection;di;asp.net;web;api;web api</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>DynamicDI</PackageId>
-    <Version>3.0.0</Version>
+    <Version>3.0.1</Version>
     <Product>DynamicDI</Product>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>one ServiceAttribute attribute for all cases</PackageReleaseNotes>	  
+    <PackageReleaseNotes>one ServiceAttribute attribute for all cases</PackageReleaseNotes>
+    <PackageIcon>logo.jpg</PackageIcon>	  
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
