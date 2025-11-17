@@ -38,12 +38,12 @@ namespace DynamicDI
 
                 if (implTypes.Length == 0)
                 {
-                    Register(services, type, type, attribute.LifeCycle);
+                    Register(services, type, type, attribute.Lifetime);
                 }
                 else
                 {
                     foreach (var implType in implTypes)
-                        Register(services, implType, type, attribute.LifeCycle);
+                        Register(services, implType, type, attribute.Lifetime);
                 }
             }
         }
@@ -63,17 +63,17 @@ namespace DynamicDI
                 .Where(t => t.IsDefined(typeof(TAttribute), inherit: false));
         }
 
-        private static void Register(IServiceCollection services, Type implementedType, Type serviceType, ServiceLifeCycle lifetime)
+        private static void Register(IServiceCollection services, Type implementedType, Type serviceType, ServiceLifetimeType lifetime)
         {
             switch (lifetime)
             {
-                case ServiceLifeCycle.Transient:
+                case ServiceLifetimeType.Transient:
                     services.AddTransient(implementedType, serviceType);
                     break;
-                case ServiceLifeCycle.Scoped:
+                case ServiceLifetimeType.Scoped:
                     services.AddScoped(implementedType, serviceType);
                     break;
-                case ServiceLifeCycle.Singleton:
+                case ServiceLifetimeType.Singleton:
                     services.AddSingleton(implementedType, serviceType);
                     break;
             }

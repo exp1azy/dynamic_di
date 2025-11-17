@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the service lifetime options for dependency injection.
     /// </summary>
-    public enum ServiceLifeCycle
+    public enum ServiceLifetimeType
     {
         Transient,
         Scoped,

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>net7.0;net8.0;net9.0</TargetFrameworks>
+	<TargetFrameworks>net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -9,21 +9,20 @@
     <Title>DynamicDI</Title>
     <Authors>explazy</Authors>
     <Description>This library provides automatic service registration in the ASP.NET Core Dependency Injection container. It simplifies and streamlines the process of service registration, reducing manual configurations and improving maintainability.</Description>
-    <PackageProjectUrl>https://github.com/exp1azy/dialect</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/exp1azy/dialect</RepositoryUrl>
-    <PackageTags>dependency;injection;inject;dependency injection;di;asp.net;web;api;web api</PackageTags>
+    <PackageProjectUrl>https://github.com/exp1azy/dynamic_di</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/exp1azy/dynamic_di</RepositoryUrl>
+    <PackageTags>dependency;injection;inject;dependency injection;di;aspnet;web;api</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>DynamicDI</PackageId>
-    <Version>3.0.1</Version>
+    <Version>3.0.2</Version>
     <Product>DynamicDI</Product>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>one ServiceAttribute attribute for all cases</PackageReleaseNotes>
+    <PackageReleaseNotes>.net10 support</PackageReleaseNotes>
     <PackageIcon>logo.jpg</PackageIcon>	  
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="7.0.0" />
   </ItemGroup>

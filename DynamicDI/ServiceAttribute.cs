@@ -9,7 +9,7 @@
         /// <summary>
         /// Gets the service lifetime for registration.
         /// </summary>
-        public ServiceLifeCycle LifeCycle { get; }
+        public ServiceLifetimeType Lifetime { get; }
 
         /// <summary>
         /// Gets the specific types that this service should be registered as.
@@ -21,17 +21,17 @@
         /// </summary>
         public ServiceAttribute()
         {
-            LifeCycle = ServiceLifeCycle.Transient;
+            Lifetime = ServiceLifetimeType.Transient;
             ImplementedTypes = null;
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceAttribute"/> class with specified lifetime and automatic implemented types registration.
         /// </summary>
-        /// <param name="lifeCycle">The service lifetime for the dependency injection container.</param>
-        public ServiceAttribute(ServiceLifeCycle lifeCycle)
+        /// <param name="lifetime">The service lifetime for the dependency injection container.</param>
+        public ServiceAttribute(ServiceLifetimeType lifetime)
         {
-            LifeCycle = lifeCycle;
+            Lifetime = lifetime;
             ImplementedTypes = null;
         }
 
@@ -41,7 +41,7 @@
         /// <param name="implementedTypes">The specific types to register this service as.</param>
         public ServiceAttribute(Type[] implementedTypes)
         {
-            LifeCycle = ServiceLifeCycle.Transient;
+            Lifetime = ServiceLifetimeType.Transient;
             ImplementedTypes = implementedTypes;
         }
 
@@ -50,9 +50,9 @@
         /// </summary>
         /// <param name="lifeTime">The service lifetime for the dependency injection container.</param>
         /// <param name="implementedTypes">The specific types to register this service as.</param>
-        public ServiceAttribute(ServiceLifeCycle lifeTime, Type[]? implementedTypes)
+        public ServiceAttribute(ServiceLifetimeType lifeTime, Type[]? implementedTypes)
         {
-            LifeCycle = lifeTime;
+            Lifetime = lifeTime;
             ImplementedTypes = implementedTypes;
         }
     }
