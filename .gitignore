@@ -1,5 +1,5 @@
 .vs/
 DynamicDI/bin/
 DynamicDI/obj/
-DynamicDI.Test.WebApi/bin/
-DynamicDI.Test.WebApi/obj/
+DynamicDI.Test.WebApi/
+/DynamicDI.Test.WebApi/DynamicDI.Test.WebApi.csproj
