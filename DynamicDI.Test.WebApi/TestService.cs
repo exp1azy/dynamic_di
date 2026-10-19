@@ -2,7 +2,7 @@
 
 namespace DynamicDI.Test.WebApi
 {
-    [Service([typeof(ITestService)])]
+    [Service(typeof(ITestService))]
     public class TestService(ITestRepository repository) : ITestService, ITestable
     {
         private readonly ITestRepository _repository = repository;

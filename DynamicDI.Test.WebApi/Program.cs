@@ -9,6 +9,11 @@ namespace DynamicDI.Test.WebApi
             builder.Services.AddControllers();
             builder.Services.RegisterServices();
 
+            foreach (var service in builder.Services)
+            {
+                Console.WriteLine($"Service registered: <{service.ServiceType.Name}, {service.ImplementationType?.Name}>, Lifetime: {service.Lifetime}");
+            }
+
             var app = builder.Build();
 
             app.MapControllers();

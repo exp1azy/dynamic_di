@@ -1,30 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
+	<TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>DynamicDI</Title>
     <Authors>explazy</Authors>
-    <Description>This library provides automatic service registration in the ASP.NET Core Dependency Injection container. It simplifies and streamlines the process of service registration, reducing manual configurations and improving maintainability.</Description>
+    <Description>DynamicDI scans assemblies for classes decorated with `[Service]` and registers them in an `IServiceCollection`. Service lifetime and service types can be configured through the attribute. If service types are not specified, the library uses the interfaces implemented by the class. If the class implements no interfaces, the concrete class type is registered.</Description>
     <PackageProjectUrl>https://github.com/exp1azy/dynamic_di</PackageProjectUrl>
     <RepositoryUrl>https://github.com/exp1azy/dynamic_di</RepositoryUrl>
-    <PackageTags>dependency;injection;inject;dependency injection;di;aspnet;web;api</PackageTags>
+    <PackageTags>dependency;injection;inject;di;aspnet;asp;web;api</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>DynamicDI</PackageId>
-    <Version>3.0.2</Version>
+    <Version>3.1.0</Version>
     <Product>DynamicDI</Product>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>.net10 support</PackageReleaseNotes>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <PackageIcon>logo.jpg</PackageIcon>	  
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
